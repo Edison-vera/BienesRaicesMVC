@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace  Model;
 
 class Propiedad extends ActiveRecord {
      
