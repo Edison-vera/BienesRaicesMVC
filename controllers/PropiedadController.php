@@ -2,12 +2,19 @@
 
 namespace Controllers;
 use MVC\Router;
+use Model\Propiedad;
+
 
 class propiedadController{
 
     public static function index(Router $router){
+
+        $propiedades = Propiedad::all();
+        $resultado = null;
+
         $router->render("propiedades/admin",[
-               "mensaje"=> "1"
+             "propiedades" => $propiedades,
+             "resultado" =>$resultado  
         ]);
 
     }
