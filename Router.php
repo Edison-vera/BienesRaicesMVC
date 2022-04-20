@@ -31,4 +31,9 @@ class Router {
             echo"Pagina no encontrada";
         }
     }
+
+    //Muestra una vista 
+    public function render($view){
+        include __DIR__ . "/views/$view.php";
+    }
 }
