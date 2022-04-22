@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes Raicies</title>
     <!-- Agregar hoja de estilos -->
-    <link rel="stylesheet" href="../build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 
 </head>
 
@@ -34,13 +34,13 @@
             <div class="barra">
                 <a href="/BienesRaices/index.php">
     
-                     <img src="../build/img/logo.png" alt="logotipo"> 
+                     <img src="/build/img/logo.png" alt="logotipo"> 
                 </a>
                 <div class="mobile-menu">
-                    <img src="../build/img/barras.svg" alt="Logotipo de bienes raices">
+                    <img src="/build/img/barras.svg" alt="Logotipo de bienes raices">
                 </div>
                 <div class="derecha">
-                    <img class="dark-mode-boton" src="../build/img/dark-mode.svg" alt="Dark Mode">
+                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Dark Mode">
                     <nav class="navegacion">
                         <a href="/BienesRaices/nosotros.php">Nosotros</a>
                         <a href="/BienesRaices/anuncios.php">Anuncios</a>
@@ -82,7 +82,7 @@
 
 
         <!-- Agregar modernizer -->
-        <script src="../build/js/bundle.min.js"></script>
+        <script src="/build/js/bundle.min.js"></script>
 </body>
 
 </html> 
