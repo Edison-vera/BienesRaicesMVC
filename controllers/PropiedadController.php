@@ -71,7 +71,7 @@ class propiedadController{
         }
         }
 
-         $router->render("/propiedades/crear",[
+            $router->render("/propiedades/crear",[
               "propiedad" => $propiedad,
               "vendedores" => $vendedores,
               "errores" => $errores
@@ -79,11 +79,43 @@ class propiedadController{
     }
     public static function actualizar(Router $router){
         
-        $id= validarORedireccionar("/index.php/admin");
+           $id= validarORedireccionar("/index.php/admin");
+           $propiedad = Propiedad::find($id);
+           $errores = Propiedad::getErrores();
+           $vendedores = Vendedor::all();
+        
+        //Ejecutar el codigo despues que el usuario envia el formulario 
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-        $propiedad = Propiedad::find($id);
-        $errores = Propiedad::getErrores();
-        $vendedores = Vendedor::all();
+ 
+           //Asignar los atributos
+           $args =$_POST["propiedad"];
+           $propiedad->sincronizar($args);
+    
+           //Validacion de errores 
+           $errores = $propiedad->validar();
+    
+          //Subida de archivos
+          //Generar un nombre unico
+           $nombreImagen = md5(uniqid(rand(), true)) . ".jpg";
+    
+          //Realiz un resize a la imagen con intervetion
+          if($_FILES["propiedad"]["tmp_name"]["imagen"]){
+           $image = Image::make($_FILES["propiedad"]["tmp_name"]["imagen"])->fit(800,600);
+           $propiedad->setImagen($nombreImagen);
+       }
+    
+    
+    
+    if(empty($errores)){
+        if($_FILES["propiedad"]["tmp_name"]["imagen"]){
+        //Almacenar la imagen
+        $image->save(CARPETA_IMAGENES .$nombreImagen);
+        }
+        $propiedad->guardar();
+    }
+    
+    }
 
         $router->render("/propiedades/actualizar",[
             "propiedad"=> $propiedad,

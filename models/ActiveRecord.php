@@ -77,7 +77,7 @@ class ActiveRecord{
 
         if($resultado) {
             // Redireccionar al usuario.
-            header('Location: ../?resultado=2');
+            header('Location: ../admin?resultado=2');
         }
     }
  
