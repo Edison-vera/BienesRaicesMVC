@@ -12,6 +12,7 @@ class propiedadController{
     public static function index(Router $router){
 
         $propiedades = Propiedad::all();
+        
         $resultado = $_GET['resultado'] ?? null;
 
         $router->render("propiedades/admin",[
@@ -76,8 +77,19 @@ class propiedadController{
               "errores" => $errores
          ]);
     }
-    public static function actualizar(){
-        echo "Actualizar";
+    public static function actualizar(Router $router){
+        
+        $id= validarORedireccionar("/index.php/admin");
+
+        $propiedad = Propiedad::find($id);
+        $errores = Propiedad::getErrores();
+        $vendedores = Vendedor::all();
+
+        $router->render("/propiedades/actualizar",[
+            "propiedad"=> $propiedad,
+            "errores" => $errores,
+            "vendedores" => $vendedores
+        ]);
 
     }
 }
