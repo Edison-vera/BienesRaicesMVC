@@ -124,4 +124,23 @@ class propiedadController{
         ]);
 
     }
+    public static function eliminar(Router $router){
+        //Eliminar de la base de datos un registro
+     if($_SERVER["REQUEST_METHOD"] === "POST"){
+    
+     //Validar ID
+     $id = $_POST["id"];
+     $id = filter_var($id, FILTER_VALIDATE_INT);
+
+     if($id){
+        
+        $tipo = $_POST['tipo'];
+
+        if(validarTipoContenido($tipo)){
+            $propiedad = Propiedad::find($id);
+            $propiedad->eliminar(); 
+     }           
+    }
+   }
+ }
 }
