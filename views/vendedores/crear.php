@@ -11,7 +11,7 @@
 
 
 
-<form class="formulario " method="POST" action="../vendedores/crear.php" >
+<form class="formulario " method="POST" action="../vendedores/crear" >
 <?php include "formulario.php"; ?>
 <input type="submit" value="Regristrar Vendedor" class="boton boton-verde">
 
