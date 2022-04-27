@@ -42,12 +42,12 @@
                 <div class="derecha">
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Dark Mode">
                     <nav class="navegacion">
-                        <a href="/BienesRaices/nosotros.php">Nosotros</a>
-                        <a href="/BienesRaices/anuncios.php">Anuncios</a>
-                        <a href="/BienesRaices/blog.php">Blog</a>
-                        <a href="/BienesRaices/contacto.php">Contacto</a>
+                        <a href="index.php/nosotros">Nosotros</a>
+                        <a href="index.php/propiedades">Anuncios</a>
+                        <a href="index.php/blog">Blog</a>
+                        <a href="index.php/contacto">Contacto</a>
                         <?php if($auth):  ?>
-                            <a href="/BienesRaices/cerrar-sesion.php">Cerrar Sesión</a>
+                            <a href="index.php/cerrar-sesion">Cerrar Sesión</a>
                         <?php endif; ?>
                     </nav>
                 </div>
@@ -69,10 +69,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                        <a href="/BienesRaices/nosotros.php">Nosotros</a>
-                        <a href="/BienesRaices/anuncios.php">Anuncios</a>
-                        <a href="/BienesRaices/blog.php">Blog</a>
-                        <a href="/BienesRaices/contacto.php">Contacto</a>
+                        <a href="index.php/nosotros">Nosotros</a>
+                        <a href="index.php/propiedades">Anuncios</a>
+                        <a href="index.php/blog">Blog</a>
+                        <a href="index.php/contacto">Contacto</a>
             </nav>
         </div>
         <p class="copyright">Todos los derechos reservados <?php echo date("Y"); ?> &copy; </p>

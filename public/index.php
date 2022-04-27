@@ -8,7 +8,7 @@ use Controllers\VendedorController;
 use Controllers\PaginasController;
 $router = new Router();
 
-
+//Zona privada
 $router->get("/admin",[PropiedadController::class, "index"]);
 $router->get("/propiedades/crear",[PropiedadController::class, "crear"]);
 $router->post("/propiedades/crear",[PropiedadController::class, "crear"]);
@@ -22,7 +22,7 @@ $router->get("/vendedores/actualizar", [VendedorController::class, "actualizar"]
 $router->post("/vendedores/actualizar", [VendedorController::class, "actualizar"]);
 $router->post("/vendedores/eliminar", [VendedorController::class, "eliminar"]);
 
-
+//Zona publica
 $router->get("/",[PaginasController::class, "index"]);
 $router->get("/nosotros",[PaginasController::class, "nosotros"]);
 $router->get("/propiedades",[PaginasController::class, "propiedades"]);
