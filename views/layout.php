@@ -69,7 +69,7 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                        <a href="index.php/nosotros">Nosotros</a>
+                        <a href="/nosotros.php">Nosotros</a>
                         <a href="index.php/propiedades">Anuncios</a>
                         <a href="index.php/blog">Blog</a>
                         <a href="index.php/contacto">Contacto</a>
