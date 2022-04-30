@@ -83,7 +83,7 @@ class propiedadController{
         
            $id= validarORedireccionar("/index.php/admin");
            $propiedad = Propiedad::find($id);
-           $errores = Propiedad::getErrores();
+           $errores = Propiedad::getErrores(); 
            $vendedores = Vendedor::all();
         
         //Ejecutar el codigo despues que el usuario envia el formulario 

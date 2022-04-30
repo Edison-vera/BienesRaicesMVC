@@ -32,7 +32,7 @@
     <header class="header <?php echo $inicio ?"inicio": ""; ?> ">
         <div class="contenedor contenido-header">
             <div class="barra">
-                <a href="/BienesRaices/index.php">
+                <a href="http://localhost/index.php/">
     
                      <img src="/build/img/logo.png" alt="logotipo"> 
                 </a>
@@ -42,12 +42,12 @@
                 <div class="derecha">
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Dark Mode">
                     <nav class="navegacion">
-                        <a href="index.php/nosotros">Nosotros</a>
-                        <a href="index.php/propiedades">Anuncios</a>
-                        <a href="index.php/blog">Blog</a>
-                        <a href="index.php/contacto">Contacto</a>
+                        <a href="nosotros">Nosotros</a>
+                        <a href="propiedades">Anuncios</a>
+                        <a href="blog">Blog</a>
+                        <a href="contacto">Contacto</a>
                         <?php if($auth):  ?>
-                            <a href="index.php/cerrar-sesion">Cerrar Sesión</a>
+                            <a href="cerrar-sesion">Cerrar Sesión</a>
                         <?php endif; ?>
                     </nav>
                 </div>
@@ -69,10 +69,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                        <a href="/nosotros.php">Nosotros</a>
-                        <a href="index.php/propiedades">Anuncios</a>
-                        <a href="index.php/blog">Blog</a>
-                        <a href="index.php/contacto">Contacto</a>
+                        <a href="nosotros">Nosotros</a>
+                        <a href="propiedades">Anuncios</a>
+                        <a href="blog">Blog</a>
+                        <a href="contacto">Contacto</a>
             </nav>
         </div>
         <p class="copyright">Todos los derechos reservados <?php echo date("Y"); ?> &copy; </p>

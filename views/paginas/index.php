@@ -34,9 +34,9 @@
 
                 <div class="imagen">
                     <picture>
-                        <source srcset="build/img/blog1.webp" type="image/webp">
-                        <source srcset="build/img/blog1.jpg" type="image/jpg">
-                        <img src="build/img/blog1.jpg" alt="Texto entrada blog">
+                        <source srcset="/build/img/blog1.webp" type="image/webp">
+                        <source srcset="/build/img/blog1.jpg" type="image/jpg">
+                        <img src="/build/img/blog1.jpg" alt="Texto entrada blog">
                     </picture>
                 </div>
 
@@ -58,9 +58,9 @@
 
                 <div class="imagen">
                     <picture>
-                        <source srcset="build/img/blog2.webp" type="image/webp">
-                        <source srcset="build/img/blog2.jpg" type="image/jpg">
-                        <img src="build/img/blog2.jpg" alt="Texto entrada blog">
+                        <source srcset="/build/img/blog2.webp" type="image/webp">
+                        <source srcset="/build/img/blog2.jpg" type="image/jpg">
+                        <img src="/build/img/blog2.jpg" alt="Texto entrada blog">
                     </picture>
                 </div>
 
