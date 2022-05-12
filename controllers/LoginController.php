@@ -6,9 +6,12 @@ use Model\Admin;
 
 class LoginController {
     public static function login (Router $router){
+
         $errores = [];
         if($_SERVER["REQUEST_METHOD"]=== "POST"){
-            echo "Autenticando...";
+
+            $auth = new Admin($_POST);
+            $errores = $auth->validar();
         }
         $router->render("auth/login",[
         "errores"=> $errores
