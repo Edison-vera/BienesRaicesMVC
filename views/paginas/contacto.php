@@ -2,10 +2,10 @@
         <h1>Contacto</h1>
 
         <?php 
-             if($mensaje){
-                 echo "<p class='alerta exito'>" . $mensaje . "</p>"; 
-             }
-             ?>
+            if($mensaje){
+                echo "<p class='alerta exito'>" . $mensaje . "</p>"; 
+            }
+            ?>
 
         <picture>
             <source srcset="/build/img/destacada3.webp" type="image/webp">
@@ -55,9 +55,7 @@
                     <input   type="radio" value="telefono" id="contacto-telefono"  name="contacto[contacto]">
 
                     <label for="contactar-correo">Correo</label>
-                    <input  type="radio" value="email" id="contacto-email" name="contacto[contacto]">
-
-                   
+                    <input  type="radio" value="email" id="contacto-email" name="contacto[contacto]">               
                 </div>
                 <div id="contacto"></div>
 

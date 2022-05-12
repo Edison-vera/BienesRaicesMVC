@@ -13,8 +13,8 @@ class PaginasController{
         $inicio = true;
 
         $router-> render("paginas/index",[
-            "propiedades" => $propiedades,
-            "inicio" => $inicio
+        "propiedades" => $propiedades,
+        "inicio" => $inicio
         ]); 
     }
     public static function nosotros(Router $router){
@@ -26,7 +26,7 @@ class PaginasController{
     public static function propiedades(Router $router){
         $propiedades = Propiedad::all();
         $router->render("paginas/propiedades",[
-            "propiedades" => $propiedades
+        "propiedades" => $propiedades
         ]);
     }
     public static function propiedad(Router $router){
@@ -42,8 +42,7 @@ class PaginasController{
     }
     public static function blog(Router $router){
         
-        $router->render("paginas/blog",[
-          
+        $router->render("paginas/blog",[ 
         ]);
     }
     public static function entrada(Router $router){
@@ -58,7 +57,6 @@ class PaginasController{
 
         if($_SERVER["REQUEST_METHOD"] ==="POST"){
             
-           
             $respuestas = $_POST["contacto"];
             
             //Crear una instancia de PHPMailer
@@ -99,14 +97,11 @@ class PaginasController{
                 //Es un email, se agrega en campo de email
                 $contenido .=  "<p> Eligio ser contactado por Correo: </p>";
                 $contenido .=  "<p> Correo: " . $respuestas["email"]. " </p>";
-            }
-
-           
+            }      
             $contenido .=  "<p> Mensaje: " . $respuestas["mensaje"]. " </p>";
             $contenido .=  "<p> Vende o Compra: " . $respuestas["tipo"]. " </p>";
             $contenido .=  "<p> Precio o Presupuesto: $" . $respuestas["precio"]. " </p>";
-            $contenido .=  "<p> Prefiere ser contactado por : " . $respuestas["contacto"]. " </p>";
-           
+            $contenido .=  "<p> Prefiere ser contactado por : " . $respuestas["contacto"]. " </p>";     
             $contenido .= "</html>";
 
             $mail->Body = $contenido;
