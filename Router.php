@@ -20,8 +20,13 @@ class Router {
 
     public function comprobarRutas(){
         
-        $urlActual = $_SERVER['PATH_INFO'] ?? null;
+        session_start();
+
+        $auth = $_SESSION['login'] ?? null;
+        //Arreglo de rutas protegidas 
+        $rutas_protegidas = ['/admin', '/propiedades/crear','/propiedades/actualizar','/propiedades/eliminar','/vendedores/crear','/vendedores/actualizar','/vendedores/eliminar'];
         
+        $urlActual = $_SERVER['PATH_INFO'] ?? null; 
         $metodo = $_SERVER['REQUEST_METHOD'];
         
         if ($metodo === 'GET'){
@@ -29,6 +34,12 @@ class Router {
         }else{
             $fn = $this->rutasPOST[$urlActual] ?? null;
         }
+
+        //Proteger las rutas
+        if(in_array($urlActual, $rutas_protegidas) && !$auth){
+            header('Location: /index.php/');
+        }
+
         if($fn){
             //La URL existe y hay una funcion asociada 
             call_user_func($fn, $this);
@@ -41,7 +52,7 @@ class Router {
     public function render($view, $datos =[]){
         
         foreach($datos as $key => $value){
-              $$key= $value;
+            $$key= $value;
         }
 
         ob_start();
