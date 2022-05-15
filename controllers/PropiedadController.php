@@ -17,14 +17,13 @@ class propiedadController{
         $resultado = $_GET['resultado'] ?? null;
 
         $router->render("propiedades/admin",[
-             "propiedades" => $propiedades,
-             "resultado" =>$resultado,
-             "vendedores" =>$vendedores  
+            "propiedades" => $propiedades,
+            "resultado" =>$resultado,
+            "vendedores" =>$vendedores  
         ]);
 
     }
-    public static function crear(Router $router){
-             
+    public static function crear(Router $router){ 
         $propiedad = new Propiedad;
         $vendedores = Vendedor::all();
         //Arreglo con mensajes de errores 

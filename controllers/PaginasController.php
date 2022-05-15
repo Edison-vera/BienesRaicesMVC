@@ -57,7 +57,9 @@ class PaginasController{
 
         if($_SERVER["REQUEST_METHOD"] ==="POST"){
             
+            $errores = [];
             $respuestas = $_POST["contacto"];
+            
             
             //Crear una instancia de PHPMailer
             $mail = new PHPMailer();
@@ -116,7 +118,8 @@ class PaginasController{
 
         }
         $router->render("paginas/contacto",[
-            'mensaje'=> $mensaje
+            'mensaje'=> $mensaje,
+            
         ]);
         
     }

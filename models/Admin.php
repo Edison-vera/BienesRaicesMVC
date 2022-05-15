@@ -26,6 +26,19 @@ class Admin extends ActiveRecord {
         }
         
         return self::$errores;
+    }
+
+    public function existeUsuario(){
+        //Revisar si el usuario existe o no 
+        $query = "SELECT * FROM " . self::$tabla . " WHERE email = '" . $this->email . "' LIMIT 1 ";
+
+        $resultado = self::$db->query($query);
+
+        if(!$resultado->num_rows){
+            self::$errores[] = 'El Usuario no existe';
+            return;
+        }
+        return $resultado;
 
     }
 }

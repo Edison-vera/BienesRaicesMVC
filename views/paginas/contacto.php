@@ -21,10 +21,10 @@
                 <legend>Información personal</legend>
 
                 <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Tu nombre" id="nombre" name="contacto[nombre]">
+                <input type="text" placeholder="Tu nombre" id="nombre" name="contacto[nombre]" required>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="contacto[mensaje]" ></textarea>
+                <textarea id="mensaje" name="contacto[mensaje]" required></textarea>
 
             </fieldset>
 
@@ -39,7 +39,7 @@
                 </select>
 
                 <label for="presupuesto">Precio o presupuesto</label>
-                <input type="number" placeholder="Tu precio o presupuesto" id="presupuesto" name="contacto[precio]">
+                <input type="number" placeholder="Tu precio o presupuesto" id="presupuesto" name="contacto[precio]" required>
 
 
             </fieldset>
@@ -52,10 +52,10 @@
                 <div class="forma-contacto">
                     
                     <label for="contactar-telefono">Telefono</label>
-                    <input   type="radio" value="telefono" id="contacto-telefono"  name="contacto[contacto]">
+                    <input   type="radio" value="telefono" id="contacto-telefono"  name="contacto[contacto]" required>
 
                     <label for="contactar-correo">Correo</label>
-                    <input  type="radio" value="email" id="contacto-email" name="contacto[contacto]">               
+                    <input  type="radio" value="email" id="contacto-email" name="contacto[contacto]" required>               
                 </div>
                 <div id="contacto"></div>
 
