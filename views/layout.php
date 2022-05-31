@@ -55,7 +55,7 @@
             <!-- Cierre de la barra -->
 <?php 
     if($inicio){
-        echo "<h1> Venta de casas y departamientos exclusivos de lujo </h1>";
+        echo "<h1 data-cy='heading-sitio'> Venta de casas y departamientos exclusivos de lujo </h1>";
             }
         ?>
 
