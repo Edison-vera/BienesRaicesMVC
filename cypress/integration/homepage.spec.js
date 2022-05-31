@@ -17,4 +17,23 @@ describe('Carga la pagina principal', () => {
         cy.get('[data-cy="iconos-nosotros"]').find('.icono').should('have.length', 3);
         cy.get('[data-cy="iconos-nosotros"]').find('.icono').should('not.have.length', 4);
     });
+    it('Prueba tener tres propiedades en el heading ', () => {
+        //Debe haber tres propiedades
+        cy.get('[data-cy="contenedor-anuncios"]').find('.anuncio').should('have.length', 3);
+        cy.get('[data-cy="contenedor-anuncios"]').find('.anuncio').should('not.have.length', 4);
+
+        //Probar en enlace de las propiedades
+        cy.get('[data-cy="enlace-propiedad"]').should('exist');
+        cy.get('[data-cy="enlace-propiedad"]').should('have.class', 'boton-amarillo-block');
+        cy.get('[data-cy="enlace-propiedad"]').should('not.have.class', 'boton-amarillo');
+
+        cy.get('[data-cy="enlace-propiedad"]').first().invoke('text').should('equal', 'Ver Propiedad');
+
+        //Probar el enlace a una propiedad 
+        cy.get('[data-cy="enlace-propiedad"]').first().click();
+        cy.get('[data-cy="titulo-propiedad"]').should('exist');
+
+        cy.wait(1000);
+        cy.go('back');
+    });
 });

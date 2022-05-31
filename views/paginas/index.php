@@ -9,7 +9,7 @@
     </main>
 
     <section class="seccion contenedor">
-        <h2>Casas y departamentos en venta</h2>
+        <h2 data-cy="contenedor-anuncios">Casas y departamentos en venta</h2>
 
         <?php 
         include "listado.php";
