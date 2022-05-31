@@ -1,5 +1,5 @@
-<div class="inconos-nosotros">
-            <div class="icono">
+<div class="inconos-nosotros" data-cy="iconos-nosotros">
+            <div class="icono" >
                 <img src="/build/img/icono1.svg" alt="Icono seguridad" loading="lazy">
                 <h3>Seguridad</h3>
                 <p>ipsum dolor sit amet consectetur adipisicing elit. Laborum nulla alias quae modi optio totam vero, quam aut sapiente distinctio voluptatem ex! Ex ipsum, similique repudiandae quia voluptate nesciunt ipsam?</p>
