@@ -36,4 +36,16 @@ describe('Carga la pagina principal', () => {
         cy.wait(1000);
         cy.go('back');
     });
+    it('Prueba el routing hacia todas las propiedades', () => {
+        cy.get('[data-cy="ver-propiedades"]').should('exist');
+        cy.get('[data-cy="ver-propiedades"]').should('have.class', 'boton-verde');
+        cy.get('[data-cy="ver-propiedades"]').invoke('attr', 'href').should('equal', 'propiedades');
+
+        cy.get('[data-cy="ver-propiedades"]').click();
+        cy.get('[data-cy="heading-propiedades"]').invoke('text').should('equal', 'Casas y departamentos en venta');
+
+        cy.wait(1000);
+        cy.go('back');
+
+    });
 });
