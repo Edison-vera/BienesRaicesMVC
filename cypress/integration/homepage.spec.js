@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+
 describe('Carga la pagina principal', () => {
     it('Prueba el header de la pagina principal', () => {
         cy.visit('/');
@@ -47,5 +48,17 @@ describe('Carga la pagina principal', () => {
         cy.wait(1000);
         cy.go('back');
 
+    });
+    it('Prueba el bloque de contacto', () => {
+        cy.get('[data-cy="imagen-contacto"]').should('exist');
+        cy.get('[data-cy="imagen-contacto"]').find('h2').invoke('text').should('equal', 'Encuentra la casa de tus sueños');
+        cy.get('[data-cy="imagen-contacto"]').find('p').invoke('text').should('equal', 'Llena el formulario de contacto y un asesor se pondra en contacto contigo a la brevedad');
+        cy.get('[data-cy="imagen-contacto"]').find('a').invoke('attr', 'href')
+            .then(href => {
+                cy.visit(href)
+            });
+        cy.get('[data-cy="heading-contacto"]').should('exist');
+        cy.wait(1000);
+        cy.visit('');
     });
 });
