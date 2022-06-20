@@ -34,16 +34,16 @@
             <div class="barra">
                 <a href="http://localhost/index.php/">
     
-                     <img src="/build/img/logo.png" alt="logotipo"> 
+                    <img src="/build/img/logo.png" alt="logotipo"> 
                 </a>
                 <div class="mobile-menu">
                     <img src="/build/img/barras.svg" alt="Logotipo de bienes raices">
                 </div>
                 <div class="derecha">
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="Dark Mode">
-                    <nav class="navegacion">
+                    <nav data-cy="navegacion-header" class="navegacion">
                         <a href="nosotros">Nosotros</a>
-                        <a href="propiedades">Anuncios</a>
+                        <a href="propiedades">Propiedades</a>
                         <a href="blog">Blog</a>
                         <a href="contacto">Contacto</a>
                         <?php if($auth):  ?>
@@ -67,14 +67,14 @@
 
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
+            <nav data-cy="navegacion-footer" class="navegacion">
                         <a href="nosotros">Nosotros</a>
-                        <a href="propiedades">Anuncios</a>
+                        <a href="propiedades">Propiedades</a>
                         <a href="blog">Blog</a>
                         <a href="contacto">Contacto</a>
             </nav>
         </div>
-        <p class="copyright">Todos los derechos reservados <?php echo date("Y"); ?> &copy; </p>
+        <p data-cy="copyright" class="copyright">Todos los derechos reservados <?php echo date("Y"); ?> &copy; </p>
 
     </footer>
 
