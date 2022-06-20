@@ -28,7 +28,7 @@
     </section>
 
     <div class="contenedor seccion seccion-inferior">
-        <section class="blog">
+        <section data-cy="blog" class="blog">
             <h3>Nuestros blog</h3>
             <article class="entrada-blog">
 
@@ -80,7 +80,7 @@
 
         </section>
 
-        <section class="testimoniales">
+        <section data-cy="testimoniales" class="testimoniales">
             <h3>Testimoniales</h3>
             <div class="testimonial">
                 <blockquote>
