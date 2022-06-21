@@ -13,7 +13,7 @@
             <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen contacto">
         </picture>
 
-        <h2>Llene el formulario de contacto </h2>
+        <h2 data-cy="heading-formulario">Llene el formulario de contacto</h2>
 
 
         <form class="formulario" action="contacto" method="POST">
