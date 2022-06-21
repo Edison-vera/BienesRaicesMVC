@@ -21,10 +21,10 @@
                 <legend>Información personal</legend>
 
                 <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Tu nombre" id="nombre" name="contacto[nombre]" required>
+                <input data-cy="input-nombre" type="text" placeholder="Tu nombre" id="nombre" name="contacto[nombre]" required>
 
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="contacto[mensaje]" required></textarea>
+                <textarea data-cy="input-mensaje" id="mensaje" name="contacto[mensaje]" required></textarea>
 
             </fieldset>
 
@@ -32,14 +32,14 @@
                 <legend>Información sobre la propiedad</legend>
 
                 <label for="opciones">Vendo o compra</label>
-                <select id="opciones" name="contacto[tipo]" >
+                <select data-cy="input-opciones" id="opciones" name="contacto[tipo]" >
                     <option value="" disabled selected>-- Seleccione --</option>
                     <option value="Vende">Vende</option>
                     <option value="Compra">Compra</option>
                 </select>
 
                 <label for="presupuesto">Precio o presupuesto</label>
-                <input type="number" placeholder="Tu precio o presupuesto" id="presupuesto" name="contacto[precio]" required>
+                <input data-cy="input-presupuesto" type="number" placeholder="Tu precio o presupuesto" id="presupuesto" name="contacto[precio]" required>
 
 
             </fieldset>
@@ -52,10 +52,10 @@
                 <div class="forma-contacto">
                     
                     <label for="contactar-telefono">Telefono</label>
-                    <input   type="radio" value="telefono" id="contacto-telefono"  name="contacto[contacto]" required>
+                    <input data-cy="forma-contacto"  type="radio" value="telefono" id="contacto-telefono"  name="contacto[contacto]" required>
 
                     <label for="contactar-correo">Correo</label>
-                    <input  type="radio" value="email" id="contacto-email" name="contacto[contacto]" required>               
+                    <input data-cy="forma-contacto" type="radio" value="email" id="contacto-email" name="contacto[contacto]" required>               
                 </div>
                 <div id="contacto"></div>
 
