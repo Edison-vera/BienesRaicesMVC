@@ -12,6 +12,8 @@ describe('Prueba el formulario de contacto', () => {
         cy.get('[data-cy="heading-formulario"]').invoke('text').should('equal', 'Llene el formulario de contacto');
         cy.get('[data-cy="heading-formulario"]').invoke('text').should('not.equal', 'Formulario');
 
+        cy.get('[data-cy="formulario-contacto"]').should('exist');
+
     });
     it('Llena los campos del formulario', () => {
         cy.visit('contacto');
@@ -28,5 +30,10 @@ describe('Prueba el formulario de contacto', () => {
         cy.get('[data-cy="input-telefono"]').type('123456789');
         cy.get('[data-cy="input-fecha"]').type('2022-03-01');
         cy.get('[data-cy="input-hora"]').type('08:30');
+
+        cy.get('[data-cy="formulario-contacto"]').submit();
+        cy.get('[data-cy="alerta-envio-formulario"]').should('exist');
+        cy.get('[data-cy="alerta-envio-formulario"]').invoke('text').should('equal', 'Mensaje enviado correctamente');
+        cy.get('[data-cy="alerta-envio-formulario"]').should('have.class', 'alerta').and('have.class', 'exito').and('not.have.class', 'error');
     });
 });

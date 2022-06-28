@@ -3,7 +3,7 @@
 
         <?php 
             if($mensaje){
-                echo "<p class='alerta exito'>" . $mensaje . "</p>"; 
+                echo "<p data-cy='alerta-envio-formulario' class='alerta exito'>" . $mensaje . "</p>"; 
             }
             ?>
 
@@ -16,7 +16,7 @@
         <h2 data-cy="heading-formulario">Llene el formulario de contacto</h2>
 
 
-        <form class="formulario" action="contacto" method="POST">
+        <form data-cy="formulario-contacto" class="formulario" action="contacto" method="POST">
             <fieldset>
                 <legend>Información personal</legend>
 
